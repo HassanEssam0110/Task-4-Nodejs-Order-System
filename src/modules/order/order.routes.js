@@ -30,7 +30,7 @@ orderRouter
   )
   .put(
     middleware.auth,
-    middleware.authorizeRoles(roles.ADMIN, roles.MODERATOR, roles.USER),
+    middleware.authorizeRoles(roles.ADMIN, roles.MODERATOR),
     middleware.validator(schema.updateOrderSchema),
     controller.updateOrder
   )
